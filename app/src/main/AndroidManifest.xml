@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AcitivityDemo">
-        <activity android:name=".activitylifecycle.SecondActivity"></activity>
-        <activity android:name=".activitylifecycle.ActivityLifecycleActivity">
+        <activity android:name=".activitylifecycle.SecondActivity" />
+        <activity android:name=".activitylifecycle.ActivityLifecycleActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

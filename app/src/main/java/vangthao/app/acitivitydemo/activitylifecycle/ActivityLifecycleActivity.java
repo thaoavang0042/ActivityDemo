@@ -4,18 +4,34 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import vangthao.app.acitivitydemo.R;
 
 public class ActivityLifecycleActivity extends AppCompatActivity {
 
+    private TextView txtMyText;
+    private EditText edtNewText;
+    private String textResult;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lifecycle);
-        Log.d("Activity","onCreate is called!");
+        Log.d("Activity", "onCreate is called!");
+        if (savedInstanceState != null) {
+            textResult = savedInstanceState.getString("myText", "NO TEXT");
+        } else {
+            textResult = "Default text";
+        }
+        txtMyText = findViewById(R.id.txtMyText);
+        edtNewText = findViewById(R.id.edtNewText);
+        txtMyText.setText(textResult);
     }
 
     @Override
@@ -55,5 +71,22 @@ public class ActivityLifecycleActivity extends AppCompatActivity {
 
     public void exitActivity(View view) {
         finish();
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Toast.makeText(this, "Saved called!", Toast.LENGTH_SHORT).show();
+        outState.putString("myText", txtMyText.getText().toString());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        textResult = savedInstanceState.getString("myText", "NO TEXT");
+    }
+
+    public void changeText(View view) {
+        txtMyText.setText(edtNewText.getText().toString());
     }
 }
