@@ -6,4 +6,10 @@
     <string name="this_is_text_to_test_saveinstancestate">This is text to test saveInstanceState</string>
     <string name="type_new_text">Type new text</string>
     <string name="change_text">Change text</string>
+    <string name="open_the_second_activity">Open The Second Activity</string>
+    <string name="open_the_third_activity">Open The Third Activity</string>
+    <string name="send_data">Send Data</string>
+    <string name="result">Result:</string>
+    <string name="the_third_activity">The third activity</string>
+    <string name="the_second_activity">The second activity</string>
 </resources>

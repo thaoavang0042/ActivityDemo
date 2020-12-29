@@ -9,14 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AcitivityDemo">
+        <activity android:name=".parceablesandbundles.SendingDataActivity">
+        </activity>
+        <activity android:name=".parceablesandbundles.ReceiveDataActivity" />
+        <activity android:name=".tasksandbackstack.TheThirdActivity" />
+        <activity android:name=".tasksandbackstack.TheSecondActivity" />
+        <activity
+            android:name=".tasksandbackstack.TheFirstActivity"
+            android:launchMode="standard">
+        </activity>
         <activity android:name=".activitylifecycle.SecondActivity" />
-        <activity android:name=".activitylifecycle.ActivityLifecycleActivity"
+        <activity
+            android:name=".activitylifecycle.ActivityLifecycleActivity"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+             <intent-filter>
+             <action android:name="android.intent.action.MAIN" />
+             <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
         </activity>
     </application>
 
