@@ -8,7 +8,7 @@ To show result: Open **Logcat** with TAG is "Activity", type is **Debug**
 - When click on button "EXIT": `onStop()` called, then `onDestroy()` called.
 ### 2. Handling when user rotation the screen
 - Use `android:screenOrientation` in AndroidManifests.xml 
-- Use saveInstanceState. `Note:` To test this let delete `android:screenOrientation="potrait"` in AndroidManifests.xml
+- Use saveInstanceState. `Note:` To test this let delete `android:screenOrientation="portrait"` in AndroidManifests.xml
 
 ## II.
 ## III.
