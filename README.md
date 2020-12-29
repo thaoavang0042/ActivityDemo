@@ -1,7 +1,7 @@
 # ActivityDemo
 ## I. Activity Lifecycle
 ### 1. When each  function called?
-**_package to test:_**activitylifecycle
+_**package to test:**_activitylifecycle
 To show result: Open **Logcat** with TAG is "Activity", type is **Debug**
 - When click run app: `onCreate()` called, then `onStart()` called, then `onResume()` called.
 - When click on button "Open Second Activity": `onPause()` > `onStop()` called.
@@ -12,11 +12,11 @@ To show result: Open **Logcat** with TAG is "Activity", type is **Debug**
 - Use saveInstanceState. `Note:` To test this let delete `android:screenOrientation="portrait"` in AndroidManifests.xml
 
 ## II.Tasks and Back Stack
-**_package to test:_**tasksandbackstack
+_**package to test:**_tasksandbackstack
 
 - Demo `launchMode` in AndroidManifests.xml in ".tasksandbackstack.TheFirstActivity"
 ## III. Parcelables and Bundles
-**_package to test:_**parcelablesandbundles
+_**package to test:**_parcelablesandbundles
 
 - I'm create an object is User with some properties: userID, username, email, address
 - Then `implements` Parcelable and override some method of Parcelable.
